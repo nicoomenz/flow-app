@@ -1,7 +1,3 @@
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm run build or npm run install`
 para crear la carpeta node_modules
 
@@ -20,3 +16,6 @@ cree un script para correr los test con cypress, primero correr npm start, y des
 ### `npm run test`
 
 test unitarios con JEST
+
+### `Deploy`
+https://wheater-app-sigma.vercel.app/
