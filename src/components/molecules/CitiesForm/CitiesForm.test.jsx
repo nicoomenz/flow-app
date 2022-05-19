@@ -20,8 +20,7 @@ describe("<CitiesForm/>", () => {
 
   test("busqueda de la ciudad", () => {
     const button = component.getByText("Consultar clima");
-    console.log(fireEvent.click(button));
-    console.log(component);
+    fireEvent.click(button);
 
     expect(mockHandler).toHaveBeenCalledTimes(1);
   });
