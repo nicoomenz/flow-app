@@ -6,7 +6,8 @@
   "extends": [
     "plugin:react/recommended",
     "airbnb",
-    "plugin:prettier/recommended"
+    "prettier",
+    "prettier/react"
   ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -15,10 +16,10 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": 0
   },
-  "parser": "babel-eslint"
+  "parser": "react-scripts/node_modules/babel-eslint"
 }
