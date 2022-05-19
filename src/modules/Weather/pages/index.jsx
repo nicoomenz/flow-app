@@ -22,10 +22,10 @@ const ClimaProvider = ({ children }) => {
       const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${appId}`;
       const { data } = await axios(url);
       const { lat, lon } = data[0];
-      const climaUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
+      const climaUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appId}`;
       const { data: dataClima } = await axios(climaUrl);
       setResultado(dataClima);
-      const climaExtendido = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${appId}`;
+      const climaExtendido = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${appId}`;
       const { data: dataClimaExtend } = await axios(climaExtendido);
       setResultadoClimaExtendido(dataClimaExtend);
       setTimeout(() => setLoading(false), 1000);
