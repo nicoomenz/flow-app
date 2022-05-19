@@ -1,0 +1,17 @@
+.card {
+    display:flex;
+    justify-content: center;
+    max-width: 600px;
+}
+
+.childrenCard {
+    width: 70%;
+    height: 300px;
+    padding: 16px;
+}
+
+.snipper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
