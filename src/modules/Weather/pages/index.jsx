@@ -16,13 +16,14 @@ const ClimaProvider = ({ children }) => {
 
   const climaExtendido = async (data, lat, lon, appId) => {
     try {
+      setLoading(true)
       const climaExtendido = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${appId}`;
       const { data: dataClimaExtend } = await axios(climaExtendido);
       setResultadoClimaExtendido(dataClimaExtend);
-      setTimeout(() => setLoading(false), 1000);
+      setLoading(false)
 
     } catch(error){
-
+      console.log(error)
     }
   }
 
